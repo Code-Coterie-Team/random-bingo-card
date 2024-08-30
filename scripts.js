@@ -11,6 +11,10 @@ function generateBingoCard(){
             if (i == 2 && j == 2){
                 cell.textContent = 'Free';
                 cell.classList.add('free');
+            } else{
+                let number;
+                number = Math.floor(Math.random() * 15) + 1 + (j * 15);
+                console.log(number)
             }
         }
         
