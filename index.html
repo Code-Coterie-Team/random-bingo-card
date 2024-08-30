@@ -17,9 +17,15 @@
             margin-bottom: 20px;
         }
 
-        table {
-            border-collapse: collapse;
-            margin-bottom: 20px;
+        th, td {
+            border: 1px solid black;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            font-size: 18px;
+        }
+        th {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
@@ -36,7 +42,7 @@
         </tr>
     </table>
 
-    <button onclick="">Generate New Card</button>
+    <button onclick="generateBingoCard()">Generate New Card</button>
 
     
 
