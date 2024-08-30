@@ -18,8 +18,12 @@ function generateBingoCard(){
                 cell.classList.add('free');
             } else{
                 let number;
-                number = Math.floor(Math.random() * 15) + 1 + (j * 15);
-                console.log(number)
+                do {
+                    number = Math.floor(Math.random() * 15) + 1 + (j * 15);
+                } while (usedNumbers.has(number));
+                console.log(number);
+                usedNumbers.add(number);
+                cell.textContent = number;
             }
         }
         
