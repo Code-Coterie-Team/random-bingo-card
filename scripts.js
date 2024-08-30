@@ -8,6 +8,11 @@ function generateBingoCard(){
         const row = card.insertRow();
         for (let j = 0; j < 5; j++){
             const cell = row.insertCell();
+            if (i == 2 && j == 2){
+                cell.textContent = 'Free';
+                cell.classList.add('free');
+            }
         }
+        
     }
 }
