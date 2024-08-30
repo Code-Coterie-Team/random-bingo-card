@@ -4,6 +4,11 @@ function generateBingoCard(){
     const usedNumbers = new Set();
     const columns = ['B', 'I', 'N', 'G', 'O'];
 
+    // Clear all rows except the header
+    while (card.rows.length > 1) {
+        card.deleteRow(1);
+    }
+
     for (let i = 0; i < 5; i++){
         const row = card.insertRow();
         for (let j = 0; j < 5; j++){
